@@ -8,7 +8,7 @@ const arrowFront = document.getElementsByClassName("key") // tableau de tous les
 
 document.addEventListener('keydown', logKey); // mise sur écoute des touches enfoncées et déclenchement de la fonction logkey
 
-let cerisierID = document.getElementById('cerisier'); // recherche si l'image existe déjà
+let cerisierID = document.getElementById('cerisier'); // recherche si l'image existe
 
 function logKey(e) {
 
@@ -19,7 +19,6 @@ function logKey(e) {
     const KONAMIcodeJoin = KONAMIcode.join(''); // tableau condensé du code KONAMI
 
     // vérification du code KONAMI dans les touches enfoncées et affichage de l'image //
-    console.log('cerisierid', cerisierID)
     if(keyboardJoin.search(KONAMIcodeJoin) != -1 && cerisierID === null && keyboard.length === KONAMIcode.length){ // vérifie que l'image n'existe pas déjà + que les touches enfoncées sont identiques à celles du code KONAMI 
         let cerisier = document.createElement("img");
         cerisier.src = "http://ekladata.com/fd2W0jZf3lfpye3Q9unj-Rby8sU.gif";
