@@ -19,6 +19,7 @@ function logKey(e) {
     const KONAMIcodeJoin = KONAMIcode.join(''); // tableau condensé du code KONAMI
 
     // vérification du code KONAMI dans les touches enfoncées et affichage de l'image //
+    console.log('cerisierid', cerisierID)
     if(keyboardJoin.search(KONAMIcodeJoin) != -1 && cerisierID === null && keyboard.length === KONAMIcode.length){ // vérifie que l'image n'existe pas déjà + que les touches enfoncées sont identiques à celles du code KONAMI 
         let cerisier = document.createElement("img");
         cerisier.src = "http://ekladata.com/fd2W0jZf3lfpye3Q9unj-Rby8sU.gif";
@@ -45,6 +46,7 @@ function logKey(e) {
             cerisierID = document.getElementById('cerisier'); // on recherche l'ID de l'image
             if(cerisierID !== null){
                 cerisierID.remove(); // on enlève l'image de cerisier si l'ID existe
+                cerisierID = document.getElementById('cerisier'); // mise à jour de la variable
             }
         }
     }
