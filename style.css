@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgb(243, 176, 205) 0%, #907dff 100%); 
+}
+
+#konami {
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 70px;
+    color: white;
+    text-shadow: 0 0 15px white;
+}
+
+/* Anim KONAMI */
+h1 span {
+    transition: 1s ease;
+}
+h1:hover span {
+    color: #fff;
+    text-shadow: 0 0 15px white;
+    cursor: pointer;
+}
+
+h1:hover span:nth-child(1n+0){
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+h1:hover span:nth-child(1):after{
+    content: "zuki";
+    font-size: 50px;
+    text-shadow: none;
+}
+
+h1:hover span:nth-child(2):after{
+    content: "kama";
+    font-size: 50px;
+    text-shadow: none;
+}
+
+h1:hover span:nth-child(3):after{
+    content: "atsuda";
+    font-size: 50px;
+    text-shadow: none;
+}
+
+h1:hover span:nth-child(4):after{
+    content: "shihara";
+    font-size: 50px;
+    text-shadow: none;
+}
+/* */
+p {
+    font-family: 'VT323', monospace;
+    font-size: 50px;
+    color: white;
+}
+
+p span {
+    background-color: #bdb2ff;
+    padding: 10px 10px 0px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+p span.letter {
+    font-size: 62px;
+    padding-top: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#cerisier {
+    width: 50vw;
+}
