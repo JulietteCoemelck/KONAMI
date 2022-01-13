@@ -7,9 +7,23 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgb(243, 176, 205) 0%, #907dff 100%); 
+    background: radial-gradient(circle, rgb(243, 176, 205) 0%, #907dff 100%);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
 }
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 
 #konami {
     text-align: center;
@@ -42,7 +56,6 @@ a {
 }
 
 a:hover {
-    transition: 1s linear;
     text-decoration: underline;
 }
 
@@ -113,8 +126,26 @@ p span.letter {
     padding-right: 20px;
 }
 
-#cerisier {
-    width: 75%;
+#konamiFound {
+    visibility: hidden;
+    width: 100vw;
+    height: 100vh; 
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, rgb(243, 176, 205) 0%, #907dff 100%);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
 }
 
+#cerisier {
+    width: 90%;
+    filter: brightness(75%);
+}
+
+.congrats {
+    position: absolute;
+    text-align: center;
+}
 

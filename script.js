@@ -4,27 +4,23 @@ let keyboard = [];
 
 let result = true;
 
+let konamiFound = document.getElementById('konamiFound')
+
 const arrowFront = document.getElementsByClassName("key") // tableau de tous les éléments front avec la classe key --> correspond aux span avec les flèches
 
 document.addEventListener('keydown', logKey); // mise sur écoute des touches enfoncées et déclenchement de la fonction logkey
 
-let cerisierID = document.getElementById('cerisier'); // recherche si l'image existe
-
 function logKey(e) {
 
-    keyboard.push(e.key); // tableau des touches enfoncées
+    keyboard.push(e.key);
 
-    let keyboardJoin = keyboard.join(''); // tableau condensé des touches enfoncées
+    let keyboardJoin = keyboard.join('');
     
-    const KONAMIcodeJoin = KONAMIcode.join(''); // tableau condensé du code KONAMI
+    const KONAMIcodeJoin = KONAMIcode.join(''); 
 
     // vérification du code KONAMI dans les touches enfoncées et affichage de l'image //
-    if(keyboardJoin.search(KONAMIcodeJoin) != -1 && cerisierID === null && keyboard.length === KONAMIcode.length){ // vérifie que l'image n'existe pas déjà + que les touches enfoncées sont identiques à celles du code KONAMI 
-        let cerisier = document.createElement("img");
-        cerisier.src = "http://ekladata.com/fd2W0jZf3lfpye3Q9unj-Rby8sU.gif";
-        cerisier.id = "cerisier";
-        cerisier.alt = 'KONAMI found';
-        document.getElementById('konami').appendChild(cerisier)
+    if(keyboardJoin.search(KONAMIcodeJoin) != -1 && keyboard.length === KONAMIcode.length){  
+        konamiFound.setAttribute('style', 'visibility: visible')
     };
 
     // surlignage des touches enfoncées correspondant au code KONAMI //
@@ -35,18 +31,14 @@ function logKey(e) {
             keyHightlight(arrowFront[i])
         } else if (keyboard[i] !== KONAMIcode[i]){
             result = false;
-            keyboard = [] // on reset le tableau des touches enfoncées
+            keyboard = [] 
         };
-
+        // reset de la page //
         if (result === false){ 
             for (x = 0; x < arrowFront.length; x ++){
-                keyNoHighlight(arrowFront[x]) // on enlève le box-shadow de toutes les flèches en cas d'erreur
+                keyNoHighlight(arrowFront[x])
             };
-            cerisierID = document.getElementById('cerisier'); // on recherche l'ID de l'image
-            if(cerisierID !== null){
-                cerisierID.remove(); // on enlève l'image de cerisier si l'ID existe
-                cerisierID = document.getElementById('cerisier'); // mise à jour de la variable
-            }
+            konamiFound.setAttribute('style', 'visibility: hidden')
         }
     }
 }
