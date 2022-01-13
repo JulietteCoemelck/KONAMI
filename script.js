@@ -24,7 +24,7 @@ function logKey(e) {
         cerisier.src = "http://ekladata.com/fd2W0jZf3lfpye3Q9unj-Rby8sU.gif";
         cerisier.id = "cerisier";
         cerisier.alt = 'KONAMI found';
-        document.body.appendChild(cerisier)
+        document.getElementById('konami').appendChild(cerisier)
     };
 
     // surlignage des touches enfoncées correspondant au code KONAMI //
