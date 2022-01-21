@@ -114,16 +114,19 @@ p {
 
 p span {
     background-color: #bdb2ff;
-    padding: 10px 10px 0px 10px;
+    padding: 20px;
     border-radius: 5px;
     margin-right: 10px;
 }
 
+i {
+    color: white;
+    height: fit-content;
+}
+
 p span.letter {
     font-size: 6vmin;
-    padding-top: 0px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 13px 20px 15px 20px;
 }
 
 #konamiFound {
