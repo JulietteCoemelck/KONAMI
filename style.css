@@ -28,6 +28,11 @@ body {
 #konami {
     text-align: center;
     flex-direction: column;
+    margin: 0 10px 0 10px;
+}
+
+#konami p {
+    line-height: 100px;
 }
 
 .footer {
@@ -61,7 +66,7 @@ a:hover {
 
 h1 {
     font-family: 'Hind Siliguri', sans-serif;
-    font-size: 70px;
+    font-size: 10vmin;
     color: white;
     text-shadow: 0 0 15px white;
     margin-top: 0;
@@ -108,9 +113,7 @@ h1:hover span:nth-child(4):after{
 p {
     font-family: 'VT323', monospace;
     font-size: 5vmin;
-    margin: 0 10px 0 10px;
     color: white;
-    line-height: 100px;
 }
 
 p span {

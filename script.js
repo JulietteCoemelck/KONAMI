@@ -19,7 +19,7 @@ function logKey(e) {
     const KONAMIcodeJoin = KONAMIcode.join(''); 
 
     // vérification du code KONAMI dans les touches enfoncées et affichage de l'image //
-    if(keyboardJoin.search(KONAMIcodeJoin) != -1 && keyboard.length === KONAMIcode.length){  
+    if(keyboardJoin.search(KONAMIcodeJoin) !== -1 && keyboard.length === KONAMIcode.length){  
         konamiFound.setAttribute('style', 'visibility: visible')
     };
 
