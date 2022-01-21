@@ -64,6 +64,7 @@ h1 {
     font-size: 70px;
     color: white;
     text-shadow: 0 0 15px white;
+    margin-top: 0;
 }
 
 /* Anim KONAMI */
@@ -107,9 +108,9 @@ h1:hover span:nth-child(4):after{
 p {
     font-family: 'VT323', monospace;
     font-size: 5vmin;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 0 10px 0 10px;
     color: white;
+    line-height: 100px;
 }
 
 p span {
