@@ -1,5 +1,5 @@
 # KONAMI
-Konami is the first gaming cheat ever, invented by Kazuhisa Hashimoto. Now, it's a common easter egg on website.
+Konami code is the first gaming cheat ever, invented by Kazuhisa Hashimoto. Now, it's a common easter egg on websites.
 
 ## How it's made
 - HTML/CSS
